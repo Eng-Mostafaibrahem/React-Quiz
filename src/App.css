@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+.progress-bar {
+    width: 100%;
+    height: 13px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress-bar::-webkit-progress-bar {
+   
+    border-radius: 5px;
+  }
+  
+  .progress-bar::-webkit-progress-value {
+    background-color:#90a1b9;
+    border-radius: 5px;
+  }
+  
+  .progress-bar::-moz-progress-bar {
+    background-color: #90a1b9;
+    border-radius: 5px;
+  }
+  
