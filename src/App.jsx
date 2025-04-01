@@ -1,8 +1,7 @@
 import { useEffect, useReducer, useState } from "react";
 import "./App.css";
 import Card from "./Card";
-import LandingPage from "./landingPage";
-import Test from "./Test";
+import LandingPage from "./LandingPage";
 import EndPage from "./EndPage";
 
 function App() {
@@ -17,9 +16,8 @@ function App() {
     questions: [],
     answer: null,
     totalPoint: 0,
-    
   };
-  const [{ questions, index, status, answer, totalPoint}, dispatch] =
+  const [{ questions, index, status, answer, totalPoint }, dispatch] =
     useReducer(reducer, initialState);
 
   function reducer(state, action) {
@@ -63,8 +61,7 @@ function App() {
 
       case "changeAnswer": {
         const question = state.questions.at(state.index);
-        console.log(question)
-        
+        console.log(question);
 
         return {
           ...state,
@@ -88,7 +85,7 @@ function App() {
   }
 
   const numQuestion = questions.length;
-  const maxPoints= questions.reduce((prev,curr)=>prev+curr.points,0)
+  const maxPoints = questions.reduce((prev, curr) => prev + curr.points, 0);
   useEffect(function () {
     fetch("http://localhost:9000/questions")
       .then((res) => res.json())
@@ -113,7 +110,6 @@ function App() {
             index={index}
             numQuestion={numQuestion}
             maxPoints={maxPoints}
-            
           />
         </div>
       )}
