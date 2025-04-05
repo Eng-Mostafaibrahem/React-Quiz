@@ -1,25 +1,3 @@
 {
     "version": 2,
-    "builds": [
-        {
-            "api": "api/questions.js",
-            "src": "app",
-            "dest": "api/questions.js",
-            "routes": [
-                {
-                    "src": "/api/questions",
-                    "methods": [
-                        "GET"
-                    ]
-                }
-            ],
-            "use": "@vercel/node",
-            "ignoreFiles": [
-                "node_modules",
-                ".git",
-                "**/__tests__/*",
-                "**/__snapshots__/*"
-            ]
-        }
-    ]
 }
