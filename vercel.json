@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
         {
-            "ReactQuiz": "api/questions.js",
+            "api": "api/questions.js",
             "src": "app",
             "dest": "api/questions.js",
             "routes": [
