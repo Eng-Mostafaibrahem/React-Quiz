@@ -1,14 +1,19 @@
+// api/questions.js
 import jsonServer from 'json-server';
 import path from 'path';
 
-const server = jsonServer.create();
-const router = jsonServer.router(path.join(process.cwd(), 'data/questions.json'));
-const middlewares = jsonServer.defaults();
+export default function handler(req, res) {
+  const server = jsonServer.create();
+  const router = jsonServer.router(path.join(process.cwd(), 'data/questions.json'));
+  const middlewares = jsonServer.defaults();
 
-server.use(middlewares);
-server.use(router);
+  server.use(middlewares);
+  server.use(router);
 
-// تعيين البورت إلى 9000 بشكل صريح
-server.listen(9000, () => {
-  console.log('JSON Server is running on port 9000');
-});
+  try {
+    server.handle(req, res);
+  } catch (error) {
+    console.error("Error while handling request:", error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+}
