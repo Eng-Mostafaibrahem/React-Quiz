@@ -1,9 +1,5 @@
 {
-    "version": 2,
-    "functions": {
-      "api/questions.js": {
-        "runtime": "nodejs16.x"
-      }
-    }
+    "version": 2
+   
   }
   
