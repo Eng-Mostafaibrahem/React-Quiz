@@ -1,31 +1,18 @@
-// See https://github.com/typicode/json-server#module
-const jsonServer = require('json-server')
+import fs from 'fs';
+import path from 'path';
 
-const server = jsonServer.create()
+export default function handler(req, res) {
+  const jsonFilePath = path.resolve('./data/questions.json'); // استخدم resolve لضمان المسار الصحيح
 
-// Uncomment to allow write operations
-// const fs = require('fs')
-// const path = require('path')
-// const filePath = path.join('db.json')
-// const data = fs.readFileSync(filePath, "utf-8");
-// const db = JSON.parse(data);
-// const router = jsonServer.router(db)
-
-// Comment out to allow write operations
-const router = jsonServer.router('db.json')
-
-const middlewares = jsonServer.defaults()
-
-server.use(middlewares)
-// Add this before server.use(router)
-server.use(jsonServer.rewriter({
-    '/api/*': '/$1',
-    '/blog/:resource/:id/show': '/:resource/:id'
-}))
-server.use(router)
-server.listen(3000, () => {
-    console.log('JSON Server is running')
-})
-
-// Export the Server API
-module.exports = server
+  fs.readFile(jsonFilePath, 'utf-8', (err, data) => {
+    if (err) {
+      return res.status(500).json({ error: 'Failed to read the file' });
+    }
+    try {
+      const jsonData = JSON.parse(data);
+      res.status(200).json(jsonData);
+    } catch (err) {
+      res.status(500).json({ error: 'Error parsing JSON data' });
+    }
+  });
+}
