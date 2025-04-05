@@ -86,8 +86,9 @@ function App() {
 
   const numQuestion = questions.length;
   const maxPoints = questions?.reduce((prev, curr) => prev + curr.points, 0);
+  // fetch("http://localhost:9000/questions")
+
   useEffect(function () {
-    // fetch("http://localhost:9000/questions")
     fetch("/api/questions")
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataRecived", payload: data }))
