@@ -6,7 +6,7 @@ export default function handler(req, res) {
     const server = jsonServer.create();
     
     // استخدم المسار الصحيح
-    const filePath = path.join(process.cwd(), 'Data', 'questions.json');
+    const filePath = path.join(process.cwd(), 'data', 'questions.json');
     console.log("Loading data from:", filePath);
 
     const router = jsonServer.router(filePath);
