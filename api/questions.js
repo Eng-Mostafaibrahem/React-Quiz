@@ -4,7 +4,7 @@ import path from 'path';
 
 export default function handler(req, res) {
   const server = jsonServer.create();
-  const router = jsonServer.router(path.join(process.cwd(), '/ReactQuiz/data/questions.json'));
+  const router = jsonServer.router(path.join(process.cwd(), 'data/questions.json'));
   const middlewares = jsonServer.defaults();
 
   server.use(middlewares);
