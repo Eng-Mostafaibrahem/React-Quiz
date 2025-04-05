@@ -88,7 +88,7 @@ function App() {
   const maxPoints = questions?.reduce((prev, curr) => prev + curr.points, 0);
   useEffect(function () {
     // fetch("http://localhost:9000/questions")
-    fetch("/api/questions")
+    fetch("https://react-quiz-lemon-one.vercel.app/api/questions")
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataRecived", payload: data }))
       .catch((err) => console.error({ type: "dataFailed", payload: err }));
