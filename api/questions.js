@@ -9,5 +9,5 @@ export default function handler(req, res) {
   server.use(middlewares);
   server.use(router);
 
-  server.handle(req, res);
+  server.handle(req, res); // استماع للطلبات بشكل صحيح
 }
