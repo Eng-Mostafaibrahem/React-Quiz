@@ -10,7 +10,6 @@ export default function LandingPage({ numQuestion, dispatch }) {
               the react quiz
             </h1>
             <div className=" font-semibold text-3xl max-sm:text-xl sm:text-2xl    p-2  ">
-              <p className="m-2">End Of The React Quiz!</p>
 
               <p className="m-2">
                 {numQuestion} question to test your react mastery
