@@ -32,7 +32,7 @@ export default function Test({
       <div className="flex items-center justify-end">
         {answer !== null ? (
           <button
-            className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
+            className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-rose-200 to-slate-500 group-hover:from-rose-200 group-hover:to-slate-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-rose-300 dark:focus:ring-slate-800"
             onClick={() => {
               if (index < 14) {
                 dispatch({ type: "next", payload: index });
@@ -41,16 +41,16 @@ export default function Test({
               }
             }}
           >
-            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
+            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-slate-600 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
               Next
             </span>
           </button>
         ) : (
           <button
             disabled
-            className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
+            className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-rose-200 to-slate-500 group-hover:from-rose-200 group-hover:to-slate-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-rose-300 dark:focus:ring-slate-800"
           >
-            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
+            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-slate-600 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
               Next
             </span>
           </button>
