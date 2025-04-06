@@ -13,7 +13,7 @@ export default function Test({
   totalPoint,
 }) {
   return (
-    <div className="col-span-2 md:col-span-2 sm:col-span-1 max-sm:sm:col-span-1  bg-rose-200 rounded-sm ">
+    <div className="col-span-2 md:col-span-2 sm:col-span-1 max-sm:sm:col-span-1  bg-rose-200 rounded-sm max-sm:rounded-xs sm:rounded-xs ">
       <div className="flex flex-col justify-center items-center gap-10 ">
         <h5 className="text-3xl text-center text-slate-500 font-bold mt-5 ">
           Choose The Correct Answer
